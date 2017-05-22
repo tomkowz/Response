@@ -7,7 +7,7 @@ extension Response {
     public var json: JSONDictionary? {
         guard let data = data else { return nil }
         do {
-            if let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? JSONDictionary {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary {
                 return json
             } else {
                 print("Cannot convert response to json for \(self).")
@@ -23,7 +23,7 @@ extension Response {
     public var jsonArray: JSONArray? {
         guard let data = data else { return nil }
         do {
-            if let jsonArray = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? JSONArray {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? JSONArray {
                 return jsonArray
             } else {
                 print("Cannot convert response to json array for \(self).")
