@@ -3,7 +3,7 @@ import Foundation
 public typealias JSONDictionary = [String: AnyObject]
 public typealias JSONArray = [JSONDictionary]
 
-extension Response {
+extension HTTPResponse {
     public var json: JSONDictionary? {
         guard let data = data else { return nil }
         do {
