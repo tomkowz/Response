@@ -1,6 +1,6 @@
 import Foundation
 
-public class Response {
+public class HTTPResponse {
     public var urlResponse: URLResponse?
     public var data: Data?
     public var error: Error?

@@ -1,6 +1,6 @@
 import Foundation
 
-extension Response: CustomDebugStringConvertible {
+extension HTTPResponse: CustomDebugStringConvertible {
     public var debugDescription: String {
         var result = "<Response>\n"
         if let urlResponse = urlResponse {
