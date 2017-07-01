@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias JSONDictionary = [String: AnyObject]
+public typealias JSONDictionary = [String: Any]
 public typealias JSONArray = [JSONDictionary]
 
 extension HTTPResponse {
